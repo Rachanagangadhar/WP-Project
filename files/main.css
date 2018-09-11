@@ -9,6 +9,7 @@ html, body{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh; /* viewport height */
+    background-attachment: scroll;
 }
 
 .bg:before {
@@ -16,7 +17,7 @@ html, body{
     position: absolute;
     left: 0; right: 0;
     top: 0; bottom: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.3);
 }
 
 ul{ /* parent container */
@@ -28,6 +29,7 @@ ul{ /* parent container */
 }
 
 .brand{
+    font-style: oblique;
     margin-right: auto;
     font-size: 20px;
     letter-spacing: 2px;
@@ -50,4 +52,48 @@ li{ /* child container / flex item */
 
 .btn:hover{
     background-color: grey;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+    color: black;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    border-radius: 10px
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: inline;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .btn {
+  background-color: grey;
+  transition: 0.3s;
 }
